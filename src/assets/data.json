@@ -1,0 +1,35 @@
+{
+  "about": "I am 22 years old and live in Brussels, Belgium. I am passionate about programming and i regularly code my personal projects. I am self-taught since 7 years.",
+  "interests": ["Problem solving", "Video Games", "Build Projects", "Coffee", "Technologies"],
+  "languages": ["French (Fluent)", "English (Basic)"],
+  "informations": [
+    { "title": "mail", "value": "contact@ablause.dev" },
+    { "title": "phone", "value": "+32470385826" },
+    { "title": "address", "value": "Ixelles, Belgium" },
+    { "title": "birth", "value": "31/03/1999" }
+  ],
+  "work_experiences": [
+    {
+      "title": "Developer full-stack",
+      "entreprise": "The Skif Agency",
+      "contract_type": "Plain time",
+      "description": "I worked in a young start-up, which allowed me to learn a lot. I was able to lead a small team and gain a lot of project management experience. We mainly used JavaScript with TypeScript.",
+      "location": "Bruxelles",
+      "time_period": {
+        "from": { "month": "03", "year": "2020" },
+        "to": { "month": "04", "year": "2021" }
+      }
+    },
+    {
+      "title": "Coursier",
+      "entreprise": "Deliveroo",
+      "contract_type": "Freelance",
+      "description": "",
+      "location": "Bruxelles",
+      "time_period": {
+        "from": { "month": "02", "year": "2018" },
+        "to": { "month": "25", "year": "2021" }
+      }
+    }
+  ]
+}
