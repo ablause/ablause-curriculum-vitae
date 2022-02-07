@@ -10,14 +10,8 @@
 </section>
 
 <style>
-  .root {
-  }
-
   .title {
     border-bottom: black solid 1px;
     width: 100%;
-  }
-
-  .content {
   }
 </style>

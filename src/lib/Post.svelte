@@ -19,7 +19,7 @@
     </p>
   </div>
   <div class="content">
-    <h5 class="title">
+    <h5>
       {title}
     </h5>
     <small class="enteprise">
@@ -44,10 +44,6 @@
 
   .content {
     margin-left: 10px;
-  }
-
-  .title {
-    margin: 13px 0 0 0;
   }
 
   .description {

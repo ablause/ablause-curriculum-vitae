@@ -15,7 +15,7 @@
         Alexandre <br />
         <span style="font-size: 38pt; font-weight: 600">Blause</span>
       </h1>
-      <h2 style="font-size: 14pt; font-weight: 400">Developpeur full-stack</h2>
+      <h2 style="font-size: 14pt; font-weight: 400">Developer full-stack</h2>
     </div>
   </div>
   <div class="sidebar">
@@ -26,15 +26,15 @@
       </li>
       <li class="info-item">
         <i class="uil uil-envelope info-icon" />
-        contact@ablause.dev
+        <a href="mailto:contact@ablause.dev">contact@ablause.dev</a>
       </li>
       <li class="info-item">
         <i class="uil uil-phone info-icon" />
-        +32470385826
+        <a href="tel:+32470385826">+32470385826</a>
       </li>
       <li class="info-item">
         <i class="uil uil-globe info-icon" />
-        ablause.dev
+        <a href="https://ablause.dev/" target="_blanck">ablause.dev</a>
       </li>
     </ul>
     <Section title="About me">
@@ -46,23 +46,13 @@
     </Section>
     <Section title="Interests">
       <p>
-        Problem solving - Video games - Build projects - Coffee - Technologies
+        {#each data.interests as interest, i}
+          {interest}{#if i + 1 < data.interests.length}{" - "}{/if}
+        {/each}
       </p>
-    </Section>
-    <Section title="Languages">
-      <p>French (Native), English (Intermediate)</p>
     </Section>
   </div>
   <div class="content">
-    <Section title="Career objective">
-      <p>
-        What is important to me in my next job is a culture of passion and
-        opportunities to learn and develop my skills from a technical
-        standpoint. I am a very open-minded person and have a great thirst for
-        learning new things. I would like to start my own business after
-        acquiring more skills.
-      </p>
-    </Section>
     <Section title="Professional Experience">
       <ul>
         {#each data.work_experiences as exp}
@@ -79,7 +69,20 @@
         {/each}
       </ul>
     </Section>
-    <Section title="Skills" />
+    <Section title="Skills">
+      <ul>
+        {#each data.skills as skill}
+          <li>
+            <h5>{skill.title}:</h5>
+            <small>
+              {#each skill.values as value, i}
+                {value}{#if i + 1 < skill.values.length}{", "}{/if}
+              {/each}
+            </small>
+          </li>
+        {/each}
+      </ul>
+    </Section>
   </div>
   <div class="footer" />
 </main>
