@@ -3,6 +3,12 @@
   import Profile from "./lib/Profile.svelte";
   import Section from "./lib/Section.svelte";
   import data from "./assets/data.json";
+
+  const searchParams = new URLSearchParams(window.location.search);
+  
+  if (searchParams.has('print')) {
+    window.print();
+  }
 </script>
 
 <main class="wrapper">
