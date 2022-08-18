@@ -1,5 +1,6 @@
-<script>
+<script lang="ts">
   import Post from "./lib/Post.svelte";
+  import PostJob from "./lib/PostJob.svelte";
   import Profile from "./lib/Profile.svelte";
   import Section from "./lib/Section.svelte";
   import data from "./assets/data.json";
@@ -8,6 +9,12 @@
   
   if (searchParams.has('print')) {
     window.print();
+  }
+
+  function getYearDif(date: string): number {
+    const dateDifMs = Date.now() - new Date(date).getTime();
+    const dateDif = new Date(dateDifMs);
+    return Math.abs(dateDif.getUTCFullYear() - 1970);
   }
 </script>
 
@@ -45,35 +52,10 @@
     </ul>
     <Section title="About me">
       <p>
-        I am 22 years old and live in Brussels, Belgium. I am passionate about
+        I am {getYearDif('1999/03/31')} years old and live in Brussels, Belgium. I am passionate about
         programming and i regularly code my personal projects. I am self-taught
-        since 7 years.
+        since {getYearDif('2015/01/01')} years.
       </p>
-    </Section>
-    <Section title="Interests">
-      <p>
-        {#each data.interests as interest, i}
-          {interest}{#if i + 1 < data.interests.length}{" - "}{/if}
-        {/each}
-      </p>
-    </Section>
-  </div>
-  <div class="content">
-    <Section title="Professional Experience">
-      <ul>
-        {#each data.work_experiences as exp}
-          <li>
-            <Post
-              title={exp.title}
-              entreprise={exp.entreprise}
-              description={exp.description}
-              contract_type={exp.contract_type}
-              time_period={exp.time_period}
-              location={exp.location}
-            />
-          </li>
-        {/each}
-      </ul>
     </Section>
     <Section title="Skills">
       <ul>
@@ -85,6 +67,44 @@
                 {value}{#if i + 1 < skill.values.length}{", "}{/if}
               {/each}
             </small>
+          </li>
+        {/each}
+      </ul>
+    </Section>
+  </div>
+  <div class="content">
+    <Section title="Professional Experience">
+      <ul>
+        {#each data.work_experiences as exp}
+          <li>
+            <PostJob
+              title={exp.title}
+              entreprise={exp.entreprise}
+              description={exp.description}
+              contract_type={exp.contract_type}
+              time_period={exp.time_period}
+              location={exp.location}
+            />
+          </li>
+        {/each}
+      </ul>
+    </Section>
+    <Section title="Formations">
+      <ul>
+        {#each data.formations as formation}
+          <li>
+            <Post title={formation.title} subTitle={formation.organization}>
+              <p>
+                {formation.description}
+              </p>
+              <ul>
+                {#each formation.skills as skill}
+                  <li>
+                    • {skill}
+                  </li>
+                {/each}
+              </ul>
+            </Post>
           </li>
         {/each}
       </ul>

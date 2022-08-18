@@ -1,12 +1,4 @@
 {
-  "about": "I am 22 years old and live in Brussels, Belgium. I am passionate about programming and i regularly code my personal projects. I am self-taught since 7 years.",
-  "interests": [
-    "Problem solving",
-    "Video Games",
-    "Build Projects",
-    "Coffee",
-    "Technologies"
-  ],
   "skills": [
     {
       "title": "Languages",
@@ -41,7 +33,7 @@
       "title": "Developer full-stack",
       "entreprise": "The Skiff Agency",
       "contract_type": "Indeterminate",
-      "description": "I worked in a young start-up, which allowed me to learn a lot. I was able to lead a small team and gain a lot of project management experience. We mainly used JavaScript with TypeScript.",
+      "description": "It was a small start-up with three employees and allowed me to touch a little and learn a lot. Our main projects were websites for the hospitality industry and SEO improvements. We mainly used JavaScript, TypeScript, ReactJS and Node.js as development technologies.",
       "location": "Bruxelles",
       "time_period": {
         "from": {
@@ -58,7 +50,7 @@
       "title": "Coursier",
       "entreprise": "Deliveroo",
       "contract_type": "Freelance",
-      "description": "",
+      "description": "Allowed me to have time to develop and learn...",
       "location": "Bruxelles",
       "time_period": {
         "from": {
@@ -70,6 +62,21 @@
           "year": "2021"
         }
       }
+    }
+  ],
+  "formations": [
+    {
+      "title": "The fundamentals of React-Native",
+      "organization": "Bruxelles Formation",
+      "description": "The goal of the training was to realize a project from A to Z. This allowed me to learn teamwork and how to manage the GitHub repository.",
+      "skills": [
+        "Agile & scrum methods",
+        "Components and their life cycle (about, state, hooks)",
+        "State management of components",
+        "Performance optimization: memoization & immutability",
+        "Core and native components and their APIs",
+        "Specificities related to Android"
+      ]
     }
   ]
 }
